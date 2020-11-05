@@ -11,7 +11,7 @@ Time series dataset for [Time series predictor](https://github.com/krypton-unite
 pip install time-series-dataset
 ```
 
-## Usage
+## Usage example
 
 ```python
 """
