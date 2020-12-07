@@ -20,7 +20,8 @@ setup(
     url='https://github.com/krypton-unite/time_series_dataset.git',
     download_url='https://pypi.org/project/time-series-dataset/',
     install_requires = [
-        'torch'
+        'torch',
+        'numpy==1.19.0'
     ],
     extras_require={
         'test': [
