@@ -6,13 +6,6 @@
 #
 --find-links https://download.pytorch.org/whl/torch_stable.html
 
-dataclasses==0.6 \
-    --hash=sha256:454a69d788c7fda44efd71e259be79577822f5e3f53f029a22d08004e951dc9f \
-    --hash=sha256:6988bd2b895eef432d562370bb707d540f32f7360ab13da45340101bc2307d84 \
-    # via torch
-future==0.18.2 \
-    --hash=sha256:b1bead90b70cf6ec3f0710ae53a525360fa360d306a86583adc6bf83a4db537d \
-    # via torch
 numpy==1.19.0 \
     --hash=sha256:13af0184177469192d80db9bd02619f6fa8b922f9f327e077d6f2a6acb1ce1c0 \
     --hash=sha256:26a45798ca2a4e168d00de75d4a524abf5907949231512f372b217ede3429e98 \
@@ -41,8 +34,8 @@ numpy==1.19.0 \
     --hash=sha256:df1889701e2dfd8ba4dc9b1a010f0a60950077fb5242bb92c8b5c7f1a6f2668a \
     --hash=sha256:fa1fe75b4a9e18b66ae7f0b122543c42debcf800aaafa0212aaff3ad273c2596 \
     # via time_series_dataset (setup.py), torch
-torch==1.7.0+cu110 \
-    --hash=sha256:a65442a40de44dc33d59015cdd62d8453b657147496cd52d0d098ab4a4f42f00 \
+torch==1.7.1+cu110 \
+    --hash=sha256:2aa7c4219181e31fae146e5e42e395128214487fc7d016bc263fc60b354d22d6 \
     # via time_series_dataset (setup.py)
 typing-extensions==3.7.4.3 \
     --hash=sha256:7cb407020f00f7bfc3cb3e7881628838e69d8f3fcab2f64742a5e76b2f841918 \
