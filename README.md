@@ -1,4 +1,4 @@
-# Oze dataset
+# Time Series Dataset
 
 [![PyPI version](https://badge.fury.io/py/time-series-dataset.svg)](https://badge.fury.io/py/time-series-dataset) [![travis](https://travis-ci.org/krypton-unite/time_series_dataset.svg?branch=master)](https://travis-ci.org/github/krypton-unite/time-series-dataset) [![codecov](https://codecov.io/gh/krypton-unite/time_series_dataset/branch/master/graph/badge.svg)](https://codecov.io/gh/krypton-unite/time-series-dataset) [![GitHub license](https://img.shields.io/github/license/krypton-unite/time_series_dataset)](https://github.com/krypton-unite/time_series_dataset)
 
@@ -23,6 +23,7 @@ import math
 import numpy as np
 import pandas as pd
 import seaborn as sns
+from datetime import datetime
 
 from time_series_dataset import TimeSeriesDataset
 
@@ -57,12 +58,14 @@ class FlightsDataset(TimeSeriesDataset):
     # pylint: disable=too-many-locals
     def __init__(self, except_last_n=0):
         flights_dataset = sns.load_dataset("flights")
-        chopped_flights_dataset = flights_dataset[:len(flights_dataset)-except_last_n]
+        chopped_flights_dataset = flights_dataset[:len(
+            flights_dataset)-except_last_n]
         passengers = chopped_flights_dataset['passengers']
         month = chopped_flights_dataset['month']
         year = chopped_flights_dataset['year']
 
-        months_3l = [month_name[0:3] for month_name in list(calendar.month_name)]
+        months_3l = [month_name[0:3]
+                     for month_name in list(calendar.month_name)]
         month_number = [months_3l.index(_month)
                         for _month in month]
 
@@ -117,5 +120,14 @@ class FlightsDataset(TimeSeriesDataset):
             year_df = year_df.append(
                 create_year_dataframe(new_years), ignore_index=True)
         input_features = [month_number_df, year_df]
-        return _raw_make_predictor(input_features, -1)
+        return _make_predictor(input_features, 1)
+
+
+def convert_year_month_array_to_datetime(year_month_array):
+    def convert_singe_year_month_array_to_datetime(single_year_month_array):
+        return datetime(year=single_year_month_array[1], month=single_year_month_array[0], day=15)
+    year_month_array_size = year_month_array.size
+    if year_month_array_size == 2:
+        return convert_singe_year_month_array_to_datetime(year_month_array)
+    return [convert_singe_year_month_array_to_datetime(year_month_array[idx, ...]) for idx in range(len(year_month_array))]
 ```
