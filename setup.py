@@ -21,7 +21,7 @@ setup(
     download_url='https://pypi.org/project/time-series-dataset/',
     install_requires = [
         'torch',
-        'numpy==1.19.3'
+        'numpy'
     ],
     extras_require={
         'test': [
