@@ -8,7 +8,7 @@ with open('HISTORY.md') as history_file:
 
 setup(
     name='time_series_dataset',
-    version='0.0.5',
+    version='0.0.6',
     description='Time series dataset for torch.',
     long_description_content_type="text/markdown",
     long_description=README + '\n\n' + HISTORY,
