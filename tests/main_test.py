@@ -1,5 +1,4 @@
 from tests.helpers import FlightsDataset
-import json
 from numpy import load
 import numpy as np
 
@@ -14,3 +13,8 @@ def test_dataset_shape():
     dict_data = load('tests/helpers/data.npz')
         
     assert np.array_equal(flights_dataset[0][0],dict_data['arr_0']) and np.array_equal(flights_dataset[0][1],dict_data['arr_1'])
+
+def test_get_feature():
+    flights_dataset = FlightsDataset()
+    years = flights_dataset.get_feature('x', 'year')
+    assert np.sum(years) == 281448.0

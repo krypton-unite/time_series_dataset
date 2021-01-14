@@ -20,6 +20,9 @@ class TimeSeriesDataset(Dataset):
         self.x = _x
         self.y = _y
 
+    def get_feature(self, attrname, feature_name, dim_0=0):
+        return getattr(self, attrname)[dim_0, :, [idx for idx, column_name in enumerate(self.labels[attrname]) if column_name == feature_name][0]]
+
     def __getitem__(self, idx):
         return (self.x[idx], self.y[idx])
 
