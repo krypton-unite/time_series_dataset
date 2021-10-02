@@ -1,6 +1,6 @@
 # Time Series Dataset
 
-[![PyPI version](https://badge.fury.io/py/time-series-dataset.svg)](https://badge.fury.io/py/time-series-dataset) [![travis](https://travis-ci.org/krypton-unite/time_series_dataset.svg?branch=master)](https://travis-ci.org/github/krypton-unite/time-series-dataset) [![codecov](https://codecov.io/gh/krypton-unite/time_series_dataset/branch/master/graph/badge.svg)](https://codecov.io/gh/krypton-unite/time-series-dataset) [![GitHub license](https://img.shields.io/github/license/krypton-unite/time_series_dataset)](https://github.com/krypton-unite/time_series_dataset)
+[![PyPI version](https://badge.fury.io/py/time-series-dataset.svg)](https://badge.fury.io/py/time-series-dataset) [![travis](https://app.travis-ci.com/krypton-unite/time_series_dataset.svg?branch=master)](https://app.travis-ci.com/github/krypton-unite/time_series_dataset) [![codecov](https://codecov.io/gh/krypton-unite/time_series_dataset/branch/master/graph/badge.svg)](https://codecov.io/gh/krypton-unite/time-series-dataset) [![GitHub license](https://img.shields.io/github/license/krypton-unite/time_series_dataset)](https://github.com/krypton-unite/time_series_dataset) [![Requirements Status](https://requires.io/github/krypton-unite/time_series_dataset/requirements.svg?branch=master)](https://requires.io/github/krypton-unite/time_series_dataset/requirements/?branch=master)
 
 ## Description
 Time series dataset for [Time series predictor](https://github.com/krypton-unite/time_series_predictor)

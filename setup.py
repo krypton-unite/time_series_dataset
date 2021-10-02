@@ -20,8 +20,10 @@ setup(
     url='https://github.com/krypton-unite/time_series_dataset.git',
     download_url='https://pypi.org/project/time-series-dataset/',
     install_requires = [
-        'torch==1.8.0+cu111',
-        'numpy'
+        # Use the following for CUDA driver
+        # 'torch==1.9.1+cu111',
+        # Without CUDA
+        'torch'
     ],
     extras_require={
         'test': [
